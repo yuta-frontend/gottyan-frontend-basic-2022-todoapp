@@ -5,9 +5,9 @@ import TEXT from "../../../variables/texts";
 import BREAKPOINT from "../../../variables/breakpoint";
 import FONTFAMILY from "../../../variables/font_family";
 import CHECK from "../../../assets/svg/check.svg";
-const Checkbox = () => {
+const Checkbox = ({ onClick }) => {
   return (
-    <StyledCheckbox>
+    <StyledCheckbox onClick={onClick}>
       <Img src={CHECK} />
     </StyledCheckbox>
   );
