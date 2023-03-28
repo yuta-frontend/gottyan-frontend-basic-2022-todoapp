@@ -9,10 +9,10 @@ const AddTaskButton = ({ onClick }) => {
   return (
     <StyledAddTaskButton onClick={onClick}>
       <Color />
-      <Div>
+      <Task>
         <Img src={PLUS} />
         <Text>タスクを追加</Text>
-      </Div>
+      </Task>
     </StyledAddTaskButton>
   );
 };
