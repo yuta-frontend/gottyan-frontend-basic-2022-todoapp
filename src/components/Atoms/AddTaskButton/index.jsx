@@ -42,7 +42,7 @@ const Img = styled.img`
   width: 20px;
   height: 20px;
 `;
-const Div= styled.div`
+const Task= styled.div`
   display:flex;
   padding:2px 6px;
 `
