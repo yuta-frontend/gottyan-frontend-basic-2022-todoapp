@@ -9,12 +9,13 @@ const Input = ({ defaultValue = "", onEditComplete }) => {
 
   useEffect(() => {
     ref.current.value = defaultValue;
-    ref.current.onblur = (e) => onEditComplete(e.current.value);
+    ref.current.onblur = (e) => onEditComplete(e.target.value);
     ref.current.focus();
     ref.current.onkeypress = (e) => {
-      if (e.key == "Enter") {
-        onEditComplete(e.current.value);
-      };
+      if (e.key === "Enter") {
+        onEditComplete(e.target.value);
+      }
+     ;
     };
   }, []);
   return <StyledInput ref={ref} defaultValue={defaultValue} />;
