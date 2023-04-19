@@ -54,6 +54,7 @@ const InputWrapper =styled.div`
   width: 214px;
   display: flex;
   height: 20px;
+  border-radius: 2px;
 `;
 const StyledWrapper = styled.div`
   display: flex;

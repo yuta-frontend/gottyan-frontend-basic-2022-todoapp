@@ -18,5 +18,5 @@ Default.args = {
   onTaskChange: (value) => console.log("taskname changed: " + value),
   onTaskComplete: () => console.log("task completed"),
   taskName: "taskname",
-  defaultIsEditing: true,
+  defaultIsEditing: false,
 };
