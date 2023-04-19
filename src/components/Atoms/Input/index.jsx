@@ -34,7 +34,7 @@ const StyledInput = styled.input`
   padding:0 4px;
   font-size:14px;
   line-height: 20px;
-
+  border-radius: 2px;
   ${TEXT.S};
   font-family: ${FONTFAMILY.ROBOTO};
 `;
