@@ -23,13 +23,18 @@ const Input = ({ defaultValue = "", onEditComplete }) => {
 export default Input;
 
 const StyledInput = styled.input`
+  display: flex;
+  align-items: center;
   color: ${COLOR.LIGHT_GRAY};
   background-color: ${COLOR.BLACK};
   border: none;
   outline: none;
   width: 100%;
   height: 20px;
-
+  padding:0 4px;
+  font-size:14px;
+  line-height: 20px;
+  border-radius: 2px;
   ${TEXT.S};
   font-family: ${FONTFAMILY.ROBOTO};
 `;
