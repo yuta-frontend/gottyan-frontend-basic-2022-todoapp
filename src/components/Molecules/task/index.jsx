@@ -51,7 +51,8 @@ const Task = ({
 };
 export default Task;
 const InputWrapper =styled.div`
-  width: 214px;
+  /* width: 214px; */
+  width: 100%;
   display: flex;
   height: 20px;
 `;
@@ -65,13 +66,15 @@ const StyledCheckboxWrapper = styled.div`
 `;
 const StyledNameAndButtonWrapper = styled.div`
   display: flex;
-  width: 214px;
+  /* width: 214px; */
+  width:100%;
   height: 20px;
 `;
 const StyledTaskName = styled.div`
   margin-right: 10px;
   font-size: 14px;
-  width: 184px;
+  /* width: 184px; */
+  width:100%;
   line-height: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
