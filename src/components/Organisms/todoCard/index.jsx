@@ -39,7 +39,7 @@ const TodoCard = () => {
   return (
     <StyledWrapper>
       <AddTaskButton onClick={onAddTaskButtonClick} />
-      <StyledTaskList>
+      <StyledTaskList hasTasks={taskList.length > 0}>
         {taskList.map((task, index) => {
           return (
             <Task
@@ -67,6 +67,6 @@ const StyledTaskList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin-top: 14px;
   width: 100%;
+  ${props => props.hasTasks && `padding-top: 14px;`}
 `;
