@@ -23,7 +23,7 @@ const TodoCard = () => {
     );
   };
 
-  const onTaskNameChange = (value, index) => {
+  const onTaskChange = (value, index) => {
     if (value === "") {
       setTaskList(
         taskList.filter((value, removeindex) => {
@@ -32,8 +32,8 @@ const TodoCard = () => {
       );
     } else {
       setTaskList(
-        taskList.map((value, removeindex) => {
-          return removeindex === index ? { name: value } : value;
+        taskList.map((task, removeindex) => {
+          return removeindex === index ? { name: value,initializing:task.initializing } : task;
         })
       );
     }
@@ -48,7 +48,7 @@ const TodoCard = () => {
             <Task
               key={index}
               onTaskComplete={() => onTaskComplete(index)}
-              onTaskNameChange={(value) => onTaskNameChange(value, index)}
+              onTaskChange={(value) => onTaskChange(value, index)}
               taskName={task.name}
               defaultIsEditing={task.initializing}
             />
