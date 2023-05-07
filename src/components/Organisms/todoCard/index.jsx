@@ -4,9 +4,6 @@ import COLOR from "../../../variables/color";
 import TEXT from "../../../variables/texts";
 import BREAKPOINT from "../../../variables/breakpoint";
 import FONTFAMILY from "../../../variables/font_family";
-import Checkbox from "../../Atoms/Checkbox";
-import EditButton from "../../Atoms/EditButton";
-import Input from "../../Atoms/Input";
 import Task from "../../Molecules/task";
 import AddTaskButton from "../../Atoms/AddTaskButton";
 
