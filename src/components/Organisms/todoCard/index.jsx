@@ -30,7 +30,9 @@ const TodoCard = () => {
     } else {
       setTaskList(
         taskList.map((task, removeindex) => {
-          return removeindex === index ? { name: value,initializing:task.initializing } : task;
+          return removeindex === index
+            ? { name: value, initializing: task.initializing }
+            : task;
         })
       );
     }
@@ -68,7 +70,7 @@ const StyledTaskList = styled.div`
   flex-direction: column;
   gap: 14px;
   width: 100%;
-  &>div:first-child{
-    padding-top:14px;
+  & > div:first-child {
+    padding-top: 14px;
   }
 `;
