@@ -33,7 +33,7 @@ const TodoCard = () => {
       setTaskList(
         taskList.map((task, removeindex) => {
           return removeindex === index
-            ? { name: value, initializing: task.initializing }
+            ? { name: value, initializing: false }
             : task;
         })
       );
