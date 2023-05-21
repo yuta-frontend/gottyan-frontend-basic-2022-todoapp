@@ -39,17 +39,17 @@ const TodoCard = () => {
       );
     }
   };
-
-  useEffect(() => {
-    localStorage.setItem("taskList", JSON.stringify(taskList));
-  }, [taskList]);
-
+  
   useEffect(() => {
     const data = localStorage.getItem("taskList");
     if (data !== null) {
       setTaskList(JSON.parse(data));
     }
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("taskList", JSON.stringify(taskList));
+  }, [taskList]);
 
   return (
     <StyledWrapper>
