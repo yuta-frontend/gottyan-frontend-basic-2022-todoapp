@@ -4,7 +4,6 @@ import Alert from "../../Atoms/Alert";
 const AlertManager = () => {
   const AlertHandlerContext = useAlertHandlerContext();
 
-  console.log(AlertHandlerContext.visible);
   if (AlertHandlerContext.visible === true) {
     setTimeout(() => {
       AlertHandlerContext.closeAlert();
