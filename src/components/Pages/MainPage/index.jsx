@@ -5,11 +5,14 @@ import BREAKPOINT from "../../../variables/breakpoint";
 import FONTFAMILY from "../../../variables/font_family";
 import Title from "../../Atoms/Title";
 import TodoCard from "../../Organisms/todoCard";
-
+import AlertManager from "../../Organisms/AlertManager";
 const MainPage = () => {
   return (
     <StyledWrapper>
       <Title />
+      <AlertContainer>
+        <AlertManager />
+      </AlertContainer>
       <TodoCard />
     </StyledWrapper>
   );
@@ -32,3 +35,11 @@ const StyledWrapper = styled.div`
     margin: 0 auto;
   }
 `;
+
+const AlertContainer=styled.div`
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+`

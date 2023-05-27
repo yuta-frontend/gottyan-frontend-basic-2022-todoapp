@@ -11,9 +11,11 @@ const Alert = ({ text, isActive = false }) => {
 export default Alert;
 
 const StyledAlert = styled.div`
+  position: absolute;
   background-color: ${COLOR.RED};
   border-radius: 4px;
   max-width: 400px;
+  width:100%;
   color: ${COLOR.WHITE};
   ${TEXT.S};
   padding: 10px 20px;

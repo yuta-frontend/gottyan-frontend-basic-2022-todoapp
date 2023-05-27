@@ -6,10 +6,11 @@ import BREAKPOINT from "../../../variables/breakpoint";
 import FONTFAMILY from "../../../variables/font_family";
 import Task from "../../Molecules/task";
 import AddTaskButton from "../../Atoms/AddTaskButton";
+import { useAlertHandlerContext } from "../../../contexts/alert_handler";
 
 const TodoCard = () => {
   const [taskList, setTaskList] = useState([]);
-
+  const AlertHandlerContext = useAlertHandlerContext();
   const onAddTaskButtonClick = () => {
     setTaskList([...taskList, { name: "", initializing: true }]);
   };
@@ -29,6 +30,7 @@ const TodoCard = () => {
           return removeindex !== index;
         })
       );
+      AlertHandlerContext.setAlert("タスク名が設定されていません");
     } else {
       setTaskList(
         taskList.map((task, removeindex) => {
@@ -39,7 +41,7 @@ const TodoCard = () => {
       );
     }
   };
-  
+
   useEffect(() => {
     const data = localStorage.getItem("taskList");
     if (data !== null) {
