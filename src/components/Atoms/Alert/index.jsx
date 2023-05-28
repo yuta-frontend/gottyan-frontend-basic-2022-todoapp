@@ -20,6 +20,7 @@ const StyledAlert = styled.div`
   ${TEXT.S};
   padding: 10px 20px;
   transition: all 0.5s ease;
+  z-index: 1;
   opacity: ${(props) => (props.isActive ? 1 : 0)};
   top: ${(props) => (props.isActive ? "80px" : "0px")};
 `;
